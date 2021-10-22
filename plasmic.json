@@ -42,7 +42,13 @@
           "componentType": "page"
         }
       ],
-      "icons": [],
+      "icons": [
+        {
+          "id": "GeSQDtOjl0p",
+          "name": "IconIcon",
+          "moduleFilePath": "plasmic/blank_project/icons/PlasmicIcon__Icon.tsx"
+        }
+      ],
       "images": [],
       "codeComponents": []
     }
