@@ -34,10 +34,14 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 
+import { useScreenVariants } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: d0hEfjBchb/globalVariant
+
 import "@plasmicapp/react-web/lib/plasmic.css";
 import * as defaultcss from "../plasmic__default_style.module.css"; // plasmic-import: global/defaultcss
 import * as projectcss from "./plasmic_blank_project.module.css"; // plasmic-import: tgdPEKAb7CK8dgvRB6vUh3/projectcss
 import * as sty from "./PlasmicHomepage.module.css"; // plasmic-import: HXmDXbThsl/css
+
+import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: GeSQDtOjl0p/icon
 
 export type PlasmicHomepage__VariantMembers = {};
 
@@ -51,7 +55,8 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: p.Flex<"div">;
-  text?: p.Flex<"div">;
+  img?: p.Flex<typeof p.PlasmicImg>;
+  button?: p.Flex<"button">;
 };
 
 export interface DefaultHomepageProps {
@@ -66,6 +71,10 @@ function PlasmicHomepage__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, args, overrides, forNode, dataFetches } = props;
+
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariants()
+  });
 
   return (
     <React.Fragment>
@@ -89,13 +98,282 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
+          <p.Stack
+            as={"div"}
+            hasGap={true}
+            className={classNames(defaultcss.all, sty.freeBox__m5UAz)}
+          >
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(defaultcss.all, sty.freeBox___6Uyvf)}
+            >
+              <p.PlasmicImg
+                data-plasmic-name={"img"}
+                data-plasmic-override={overrides.img}
+                alt={""}
+                className={classNames(sty.img)}
+                displayHeight={"default" as const}
+                displayMaxHeight={"none" as const}
+                displayMaxWidth={"none" as const}
+                displayMinHeight={"0" as const}
+                displayMinWidth={"0" as const}
+                displayWidth={"default" as const}
+              />
+
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(defaultcss.all, sty.freeBox___2R55F)}
+              >
+                <p.Stack
+                  as={p.PlasmicLink}
+                  hasGap={true}
+                  className={classNames(defaultcss.a, sty.link__lcPsc)}
+                  component={Link}
+                  platform={"nextjs"}
+                >
+                  {false ? (
+                    <IconIcon
+                      className={classNames(defaultcss.all, sty.svg__niDDy)}
+                      role={"img"}
+                    />
+                  ) : null}
+
+                  <div
+                    className={classNames(
+                      defaultcss.all,
+                      defaultcss.__wab_text,
+                      sty.text___5Y6Vz
+                    )}
+                  >
+                    {"Services"}
+                  </div>
+
+                  {false ? (
+                    <IconIcon
+                      className={classNames(defaultcss.all, sty.svg__z4KJf)}
+                      role={"img"}
+                    />
+                  ) : null}
+                </p.Stack>
+
+                <p.Stack
+                  as={p.PlasmicLink}
+                  hasGap={true}
+                  className={classNames(defaultcss.a, sty.link__mgJi3)}
+                  component={Link}
+                  platform={"nextjs"}
+                >
+                  {false ? (
+                    <IconIcon
+                      className={classNames(defaultcss.all, sty.svg__gyTnj)}
+                      role={"img"}
+                    />
+                  ) : null}
+
+                  <div
+                    className={classNames(
+                      defaultcss.all,
+                      defaultcss.__wab_text,
+                      sty.text__pEK9
+                    )}
+                  >
+                    {"Features"}
+                  </div>
+
+                  {false ? (
+                    <IconIcon
+                      className={classNames(defaultcss.all, sty.svg__d2NjA)}
+                      role={"img"}
+                    />
+                  ) : null}
+                </p.Stack>
+
+                <p.Stack
+                  as={p.PlasmicLink}
+                  hasGap={true}
+                  className={classNames(defaultcss.a, sty.link__perL9)}
+                  component={Link}
+                  platform={"nextjs"}
+                >
+                  {false ? (
+                    <IconIcon
+                      className={classNames(defaultcss.all, sty.svg__li5Lh)}
+                      role={"img"}
+                    />
+                  ) : null}
+
+                  <div
+                    className={classNames(
+                      defaultcss.all,
+                      defaultcss.__wab_text,
+                      sty.text__qzrK2
+                    )}
+                  >
+                    {"Company"}
+                  </div>
+
+                  {false ? (
+                    <IconIcon
+                      className={classNames(defaultcss.all, sty.svg__dh87R)}
+                      role={"img"}
+                    />
+                  ) : null}
+                </p.Stack>
+
+                <p.Stack
+                  as={p.PlasmicLink}
+                  hasGap={true}
+                  className={classNames(defaultcss.a, sty.link__kbAp6)}
+                  component={Link}
+                  platform={"nextjs"}
+                >
+                  {false ? (
+                    <IconIcon
+                      className={classNames(defaultcss.all, sty.svg__fvF5B)}
+                      role={"img"}
+                    />
+                  ) : null}
+
+                  <div
+                    className={classNames(
+                      defaultcss.all,
+                      defaultcss.__wab_text,
+                      sty.text__d3Zdi
+                    )}
+                  >
+                    {"Contact"}
+                  </div>
+
+                  {false ? (
+                    <IconIcon
+                      className={classNames(defaultcss.all, sty.svg__unIgE)}
+                      role={"img"}
+                    />
+                  ) : null}
+                </p.Stack>
+
+                <p.Stack
+                  as={p.PlasmicLink}
+                  hasGap={true}
+                  className={classNames(defaultcss.a, sty.link__jVxg1)}
+                  component={Link}
+                  platform={"nextjs"}
+                >
+                  {false ? (
+                    <IconIcon
+                      className={classNames(defaultcss.all, sty.svg__gQxxW)}
+                      role={"img"}
+                    />
+                  ) : null}
+
+                  <div
+                    className={classNames(
+                      defaultcss.all,
+                      defaultcss.__wab_text,
+                      sty.text__qhVoh
+                    )}
+                  >
+                    {"Log in"}
+                  </div>
+
+                  {false ? (
+                    <IconIcon
+                      className={classNames(defaultcss.all, sty.svg__zGBw4)}
+                      role={"img"}
+                    />
+                  ) : null}
+                </p.Stack>
+
+                <p.Stack
+                  as={p.PlasmicLink}
+                  hasGap={true}
+                  className={classNames(defaultcss.a, sty.link__v85Zd)}
+                  component={Link}
+                  platform={"nextjs"}
+                >
+                  {false ? (
+                    <IconIcon
+                      className={classNames(defaultcss.all, sty.svg__cozgp)}
+                      role={"img"}
+                    />
+                  ) : null}
+
+                  <div
+                    className={classNames(
+                      defaultcss.all,
+                      defaultcss.__wab_text,
+                      sty.text__iqoM0
+                    )}
+                  >
+                    {"Sign up"}
+                  </div>
+
+                  {false ? (
+                    <IconIcon
+                      className={classNames(defaultcss.all, sty.svg__n0Vl9)}
+                      role={"img"}
+                    />
+                  ) : null}
+                </p.Stack>
+              </p.Stack>
+
+              {false ? (
+                <div className={classNames(defaultcss.all, sty.freeBox__vR9Hb)}>
+                  <button
+                    data-plasmic-name={"button"}
+                    data-plasmic-override={overrides.button}
+                    className={classNames(
+                      defaultcss.button,
+                      defaultcss.__wab_text,
+                      sty.button
+                    )}
+                  >
+                    {"Sign up"}
+                  </button>
+
+                  <p.Stack
+                    as={p.PlasmicLink}
+                    hasGap={true}
+                    className={classNames(defaultcss.a, sty.link__vDieq)}
+                    component={Link}
+                    platform={"nextjs"}
+                  >
+                    {false ? (
+                      <IconIcon
+                        className={classNames(defaultcss.all, sty.svg__tZgFv)}
+                        role={"img"}
+                      />
+                    ) : null}
+
+                    <div
+                      className={classNames(
+                        defaultcss.all,
+                        defaultcss.__wab_text,
+                        sty.text__iZjWz
+                      )}
+                    >
+                      {"Log in"}
+                    </div>
+
+                    {false ? (
+                      <IconIcon
+                        className={classNames(defaultcss.all, sty.svg__roDcs)}
+                        role={"img"}
+                      />
+                    ) : null}
+                  </p.Stack>
+                </div>
+              ) : null}
+            </p.Stack>
+          </p.Stack>
+
           <div
-            data-plasmic-name={"text"}
-            data-plasmic-override={overrides.text}
             className={classNames(
               defaultcss.all,
               defaultcss.__wab_text,
-              sty.text
+              sty.text__xAG
             )}
           >
             {"Welcome to your first page."}
@@ -107,15 +385,17 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "text"],
-  text: ["text"]
+  root: ["root", "img", "button"],
+  img: ["img"],
+  button: ["button"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  text: "div";
+  img: typeof p.PlasmicImg;
+  button: "button";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -179,7 +459,8 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    text: makeNodeComponent("text"),
+    img: makeNodeComponent("img"),
+    button: makeNodeComponent("button"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
