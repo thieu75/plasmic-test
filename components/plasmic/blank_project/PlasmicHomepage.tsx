@@ -42,6 +42,7 @@ import * as projectcss from "./plasmic_blank_project.module.css"; // plasmic-imp
 import * as sty from "./PlasmicHomepage.module.css"; // plasmic-import: HXmDXbThsl/css
 
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: GeSQDtOjl0p/icon
+import { Button } from "../../owned/button/button";
 
 export type PlasmicHomepage__VariantMembers = {};
 
@@ -378,6 +379,7 @@ function PlasmicHomepage__RenderFunc(props: {
           >
             {"Welcome to your first page."}
           </div>
+          <Button />
         </div>
       </div>
     </React.Fragment>
